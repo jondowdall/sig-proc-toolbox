@@ -105,6 +105,38 @@ public:
     const double dot(const Vector &other) const;
 
     /*******************************************************************
+     * Method: magnitude2
+     *
+     * Description:
+     * Return the square of the magnitude of the vector.
+     */
+    const double magnitude2() const;
+
+    /*******************************************************************
+     * Method: magnitude
+     *
+     * Description:
+     * Return the magnitude of the vector.
+     */
+    const double magnitude() const;
+
+    /*******************************************************************
+     * Method: normalise
+     *
+     * Description:
+     * Normalise the vector.
+     */
+    void normalise();
+
+    /*******************************************************************
+     * Method: normal
+     *
+     * Description:
+     * Return the normal vector for this vector.
+     */
+    Vector normal() const;
+
+    /*******************************************************************
      * Vector Friend Method: stream insertion operator
      *
      * Description:

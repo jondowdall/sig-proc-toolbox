@@ -2,7 +2,33 @@
 #define _BINARY_HPP_
 
 /*
- * binary.hpp - interface to the maths functions.
+ * binary.hpp - interface to the binary functions:
+ * add
+ * subtract
+ * multiply
+ * divide
+ * 
+ * atan2 (double y, double x);
+ * frexp (double x, int *__exponent);
+ * ldexp (double x, int __exponent);
+ * modf (double x, _Mdouble_ *__iptr);
+ * pow (double x, double y);
+ * hypot (double x, double y);
+ * fmod (double x, double y);
+ * copysign (double x, double y);
+ * jn (int, double x);
+ * yn (int, double x);
+ * nextafter (double x, double y);
+ * nexttoward (double x, long double y);
+ * remainder (double x, double y);
+ * scalbn (double x, int n);
+ * scalbln (double x, long int n);
+ * remquo (double x, double y, int *__quo);
+ * fdim (double x, double y);
+ * fmax (double x, double y);
+ * fmin (double x, double y);
+ * fma (double x, double y, double z);
+ * 
  */
 #include "functions.hpp"
 

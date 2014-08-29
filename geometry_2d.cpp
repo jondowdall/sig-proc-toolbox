@@ -4,6 +4,8 @@
 
 #include "geometry_2d.hpp"
 
+#include <cmath>
+
 using namespace std;
 
 namespace Geometry {
@@ -117,6 +119,47 @@ const Vector Vector::operator/(const double &other) const {
  */
 const double Vector::dot(const Vector &other) const {
     return _x * other._x + _y * other._y;
+}
+
+/***********************************************************************
+ * Vector Method: magnitude2
+ *
+ * Description:
+ */
+const double Vector::magnitude2() const {
+    return _x * _x + _y * _y;
+}
+
+/***********************************************************************
+ * Vector Method: magnitude
+ *
+ * Description:
+ */
+const double Vector::magnitude() const {
+    return sqrt(magnitude2());
+}
+
+/***********************************************************************
+ * Vector Method: normalise
+ *
+ * Description:
+ */
+void Vector::normalise() {
+	double m = magnitude();
+	if (m > 0.0) {
+		*this /= m;
+	}
+}
+
+/***********************************************************************
+ * Vector Method: normal
+ *
+ * Description:
+ */
+Vector Vector::normal() const {
+	Vector norm = Vector(*this);
+	norm.normalise();
+	return norm;
 }
 
 /*******************************************************************

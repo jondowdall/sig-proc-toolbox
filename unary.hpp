@@ -2,7 +2,57 @@
 #define _UNARY_HPP_
 
 /*
- * unary.hpp - interface to unary functions.
+ * unary.hpp - interface to unary functions:
+ * acos
+ * asin
+ * atan
+ * cos
+ * sin
+ * tan
+ * cosh
+ * sinh
+ * tanh
+ * acosh
+ * asinh
+ * atanh
+ * exp
+ * log
+ * log10
+ * exp10
+ * pow10
+ * expm1
+ * log1p
+ * logb
+ * exp2
+ * log2
+ * sqrt
+ * cbrt
+ * ceil
+ * fabs
+ * floor
+ * int isinf
+ * int finite
+ * int isnan
+ * j0
+ * j1
+ * y0
+ * y1
+ * erf
+ * erfc
+ * lgamma
+ * tgamma
+ * gamma
+ * rint
+ * int,ilogb
+ * nearbyint
+ * round
+ * trunc
+ * int fpclassify(double value)
+ * int signbit(double value)
+ * long int,lrint
+ * long long int,llrint
+ * long int,lround
+ * long long int,llround
  */
 
 #include "functions.hpp"
