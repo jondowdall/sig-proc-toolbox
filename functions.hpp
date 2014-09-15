@@ -1,6 +1,8 @@
 /*
  * functions.hpp - interface to the maths functions.
  */
+#ifndef _FUNCTIONS_HPP_
+#define _FUNCTIONS_HPP_
 
 #include <string>
 #include <vector>
@@ -11,7 +13,8 @@ typedef std::vector<double> Data;
 
 class DataSource {
 public:
-    virtual Data & value() = 0;
+//    virtual Data & value() = 0;
+      double as_real() {return 0.0;}
 };
 
 class NullDataSource : public DataSource {
@@ -25,8 +28,9 @@ extern NullDataSource null_source;
 
 class Operation : public DataSource {
 public:
-    virtual void calculate() = 0;
-    virtual bool recalculate_required() {return true;}
+//    virtual void calculate() = 0;
+//    virtual bool recalculate_required() {return true;}
+    virtual std::string class_name() {return "Operation<Abstract>";}
 };
 
 class Named {
@@ -36,11 +40,11 @@ public:
     std::string name();
 };
 
-class Reduce : public Operation {
+class Join : public Operation {
     DataSource *_input;
     Data _result;
 public:
-    Reduce(DataSource *input);
+    Join(DataSource *input);
 
     void calculate();
 
@@ -48,3 +52,5 @@ public:
 };
 
 }
+
+#endif

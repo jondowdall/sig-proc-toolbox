@@ -10,13 +10,15 @@
 #include "geometry_2d.hpp"
 #include "geometry_3d.hpp"
 
+#include "unary.hpp"
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
 
     cout << "Hello World!" << endl;
     cout << fegetround() << endl;
- 
+
     Geometry::Three_Dimensional::Vector v1;
     Geometry::Three_Dimensional::Vector v2(1.0, 2.0, 1.5);
     Geometry::Three_Dimensional::Vector v3(3.0, 2.0, 1.0);
@@ -41,6 +43,11 @@ int main(int argc, char *argv[]) {
     cout << "v2.normal() = " << v2.normal() << endl;
     v3.normalise();
     cout << "Normalised v3 = " << v3 << endl;
+
+    Functions::Operation *test_op = new Functions::Sine;
+    cout << test_op->class_name() << endl;
+    cout << Functions::Sine::static_class_name() << endl;
+
 
     return 0;
 }
