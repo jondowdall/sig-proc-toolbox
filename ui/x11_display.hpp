@@ -65,20 +65,36 @@ public:
     int default_screen() {return DefaultScreen(_display);}
 
     /***************************************************************************
-     * Method: default_screen
+     * Method: default_depth
      *
      * Description:
-     * Return the screen number of the default screen of this display.
+     * Return the default depth of a the default screen of this display.
      */
     int default_depth() {return DefaultDepth(_display, default_screen());}
 
     /***************************************************************************
-     * Method: default_screen
+     * Method: default_depth
      *
      * Description:
-     * Return the screen number of the default screen of this display.
+     * Return the default depth of a particular screen of this display.
      */
     int default_depth(int screen) {return DefaultDepth(_display, screen);}
+
+    /***************************************************************************
+     * Method: root_window
+     *
+     * Description:
+     * Return the root window for the default screen of this display.
+     */
+    int root_window() {return RootWindow(_display, default_screen());}
+
+    /***************************************************************************
+     * Method: root_window
+     *
+     * Description:
+     * Return the root window for the specified screen of this display.
+     */
+    int root_window(int screen) {return RootWindow(_display, screen);}
 
 #if 0
     /***************************************************************************

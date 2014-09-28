@@ -36,7 +36,7 @@
 #include <vector>
 
 namespace Functions {
-
+#if 0
 class Binary : public Operation {
     DataSource *_input1;
     DataSource *_input2;
@@ -78,7 +78,7 @@ class Divide : public Binary, Named {
 public:
     Divide();
 };
-
+#endif
 }
 
 #endif

@@ -6,6 +6,7 @@
  */
 #include "x11_display.hpp"
 
+
 using namespace std;
 
 namespace X11 {
@@ -45,6 +46,7 @@ Window Display::create_window(int x, int y, unsigned int width,
     win = XCreateWindow(_display, DefaultRootWindow(_display), x, y, width,
                         height, border_width, depth, win_class, visual,
                         valuemask, attributes);
+
     return win;
 }
 

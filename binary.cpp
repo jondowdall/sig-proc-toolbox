@@ -9,7 +9,7 @@
 using namespace std;
 
 namespace Functions {
-
+#if 0
 Binary::Binary(DataSource *input1=&null_source,
                DataSource *input2=&null_source)
   : _input1(input1),
@@ -72,5 +72,5 @@ Divide::Divide()
 double Divide::execute(double input1, double input2) {
     return input1 / input2;
 }
-
+#endif
 }
